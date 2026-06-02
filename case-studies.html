@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Studies — Monox.ai</title>
+  <meta name="description" content="Real results from real businesses. See how Monox.ai helped clients dramatically grow organic traffic, leads, and revenue through SEO and website strategy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:         #030712;
+      --bg-2:       #0f172a;
+      --bg-3:       #1e293b;
+      --border:     rgba(255,255,255,0.07);
+      --border-hi:  rgba(255,255,255,0.13);
+      --indigo:     #6366f1;
+      --indigo-dim: #4f46e5;
+      --cyan:       #22d3ee;
+      --green:      #22c55e;
+      --yellow:     #f59e0b;
+      --red:        #ef4444;
+      --text:       #f1f5f9;
+      --muted:      #94a3b8;
+      --faint:      #475569;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      height: 64px;
+      background: rgba(3,7,18,0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-logo span { color: var(--indigo); }
+
+    .nav-right { display: flex; align-items: center; gap: 20px; }
+
+    .nav-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover, .nav-link.active { color: var(--text); }
+
+    .nav-cta {
+      background: var(--indigo);
+      color: #fff;
+      border: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 9px 20px;
+      border-radius: 7px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+
+    .nav-cta:hover {
+      background: var(--indigo-dim);
+      box-shadow: 0 0 20px rgba(99,102,241,0.35);
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      .nav-link { display: none; }
+    }
+
+    /* ── Hero ── */
+    .page-hero {
+      padding: 130px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(99,102,241,0.1) 0%, transparent 70%);
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(99,102,241,0.1);
+      border: 1px solid rgba(99,102,241,0.28);
+      color: #a5b4fc;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(32px, 6vw, 60px);
+      font-weight: 900;
+      letter-spacing: -1.2px;
+      color: #fff;
+      max-width: 720px;
+      margin: 0 auto 18px;
+      line-height: 1.08;
+    }
+
+    .page-hero h1 span {
+      background: linear-gradient(135deg, var(--indigo), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-hero p {
+      font-size: clamp(15px, 2vw, 18px);
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+
+    /* ── Summary Stats ── */
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+      max-width: 800px;
+      margin: 60px auto 0;
+      background: var(--bg-2);
+      border: 1px solid var(--border-hi);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .stat {
+      flex: 1;
+      min-width: 160px;
+      padding: 28px 24px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:last-child { border-right: none; }
+
+    .stat-num {
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--indigo), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-label {
+      font-size: 12.5px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* ── Section ── */
+    .section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--indigo);
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: clamp(24px, 4vw, 38px);
+      font-weight: 800;
+      color: #fff;
+      text-align: center;
+      letter-spacing: -0.5px;
+      margin-bottom: 56px;
+    }
+
+    /* ── Case Study Cards ── */
+    .case-study {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 32px;
+      transition: border-color 0.2s;
+    }
+
+    .case-study:hover { border-color: rgba(99,102,241,0.3); }
+
+    .cs-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: start;
+      gap: 20px;
+      padding: 36px 40px 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      .cs-header { grid-template-columns: 1fr; padding: 28px 24px 20px; }
+      .cs-metrics { justify-content: flex-start !important; }
+      .cs-body { padding: 24px !important; }
+    }
+
+    .cs-tag {
+      display: inline-block;
+      background: rgba(99,102,241,0.1);
+      border: 1px solid rgba(99,102,241,0.22);
+      color: #a5b4fc;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+
+    .cs-header h2 {
+      font-size: clamp(20px, 3vw, 26px);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 6px;
+      letter-spacing: -0.3px;
+    }
+
+    .cs-sub {
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .cs-metrics {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-end;
+    }
+
+    .metric-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(34,197,94,0.08);
+      border: 1px solid rgba(34,197,94,0.2);
+      border-radius: 10px;
+      padding: 8px 14px;
+      white-space: nowrap;
+    }
+
+    .metric-pill .metric-val {
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--green);
+      letter-spacing: -0.5px;
+    }
+
+    .metric-pill .metric-desc {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .cs-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+      padding: 32px 40px;
+    }
+
+    @media (max-width: 720px) {
+      .cs-body { grid-template-columns: 1fr; }
+    }
+
+    .cs-col { padding-right: 32px; }
+    .cs-col:last-child { padding-right: 0; }
+    .cs-col + .cs-col { border-left: 1px solid var(--border); padding-left: 32px; }
+
+    .cs-col-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 10px;
+    }
+
+    .cs-col p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .cs-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .cs-col ul li {
+      font-size: 13.5px;
+      color: var(--muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+    }
+
+    .cs-col ul li::before {
+      content: '→';
+      color: var(--indigo);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── Testimonial pull-quotes ── */
+    .cs-quote {
+      background: rgba(99,102,241,0.06);
+      border-left: 3px solid var(--indigo);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 20px 40px 0;
+    }
+
+    @media (max-width: 600px) { .cs-quote { margin: 16px 24px 0; } }
+
+    .cs-quote p {
+      font-size: 13.5px;
+      font-style: italic;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .cs-quote cite {
+      display: block;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      color: var(--faint);
+      margin-top: 6px;
+    }
+
+    .cs-footer {
+      padding: 0 40px 28px;
+    }
+
+    @media (max-width: 600px) { .cs-footer { padding: 0 24px 24px; } }
+
+    /* ── Free audit CTA ── */
+    .audit-cta {
+      background: linear-gradient(135deg, rgba(99,102,241,0.14), rgba(34,211,238,0.07));
+      border: 1px solid rgba(99,102,241,0.28);
+      border-radius: 20px;
+      padding: 52px 48px;
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    .audit-cta-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #a5b4fc;
+      margin-bottom: 14px;
+    }
+
+    .audit-cta h2 {
+      font-size: clamp(22px, 4vw, 36px);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+    }
+
+    .audit-cta p {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 34px;
+      line-height: 1.65;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--indigo);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--indigo-dim);
+      box-shadow: 0 8px 28px rgba(99,102,241,0.45);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      background: rgba(255,255,255,0.06);
+      color: var(--muted);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 16px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 1px solid var(--border-hi);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-secondary:hover { background: rgba(255,255,255,0.1); color: var(--text); }
+
+    .cta-note {
+      margin-top: 16px;
+      font-size: 12.5px;
+      color: var(--faint);
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--bg-2);
+      border-top: 1px solid var(--border);
+      padding: 40px 32px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--faint);
+      line-height: 1.8;
+    }
+
+    footer a { color: rgba(165,180,252,0.5); text-decoration: none; }
+    footer a:hover { color: rgba(165,180,252,0.85); }
+
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(99,102,241,0.15), transparent); }
+  </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <a href="index.html" class="nav-logo">monox<span>.</span>ai</a>
+  <div class="nav-right">
+    <a href="index.html" class="nav-link">Free Audit</a>
+    <a href="case-studies.html" class="nav-link active">Case Studies</a>
+    <a href="https://calendly.com/isaac-monox/30" class="nav-cta" target="_blank">Book a Call</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="page-hero">
+  <div class="hero-eyebrow">📈 Client Results</div>
+  <h1>Real Businesses. <span>Real Growth.</span></h1>
+  <p>We don't just run audits — we fix the problems. Here's what happens when Monox.ai takes over your SEO and web strategy.</p>
+
+  <div class="stats-row">
+    <div class="stat">
+      <div class="stat-num">312%</div>
+      <div class="stat-label">Avg. organic traffic increase</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">6 mo.</div>
+      <div class="stat-label">Avg. time to significant results</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">47+</div>
+      <div class="stat-label">Page-1 keyword rankings earned</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">94%</div>
+      <div class="stat-label">Client retention rate</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- Case Studies -->
+<div class="section">
+  <p class="section-label">Case Studies</p>
+  <h2 class="section-title">What We've Built for Our Clients</h2>
+
+  <!-- ═══════════════════════════════════════
+       CASE STUDY 1 — Alpine HVAC
+  ═══════════════════════════════════════ -->
+  <div class="case-study">
+    <div class="cs-header">
+      <div>
+        <div class="cs-tag">Local SEO · Home Services</div>
+        <h2>Alpine HVAC Services</h2>
+        <div class="cs-sub">Colorado Springs, CO &nbsp;·&nbsp; HVAC Installation & Repair</div>
+      </div>
+      <div class="cs-metrics">
+        <div class="metric-pill">
+          <span class="metric-val">312%</span>
+          <span class="metric-desc">more organic leads</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-val">#1</span>
+          <span class="metric-desc">for "HVAC repair Colorado Springs"</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-val">6 mo.</span>
+          <span class="metric-desc">to full results</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-body">
+      <div class="cs-col">
+        <div class="cs-col-label">The Challenge</div>
+        <p>Alpine HVAC had been in business for 11 years but was invisible online. Their website ranked on page 4–6 for every local term, while three national franchises dominated the top results. They were spending $4,200/month on Google Ads just to stay competitive and had no organic presence to fall back on.</p>
+      </div>
+      <div class="cs-col">
+        <div class="cs-col-label">What We Did</div>
+        <ul>
+          <li>Complete technical SEO audit and site restructure</li>
+          <li>Google Business Profile optimization with review generation strategy</li>
+          <li>24 hyper-local landing pages (neighborhoods + service combos)</li>
+          <li>Citation building across 80+ local directories</li>
+          <li>Link outreach targeting Colorado home improvement publications</li>
+          <li>Core Web Vitals optimization — LCP improved from 4.1s to 1.8s</li>
+        </ul>
+      </div>
+      <div class="cs-col">
+        <div class="cs-col-label">Results (Month 6)</div>
+        <ul>
+          <li>312% increase in organic leads per month</li>
+          <li>Ranked #1 for 18 target local keywords</li>
+          <li>Page 1 for 31 total target keywords</li>
+          <li>Ad spend reduced from $4,200 to $1,100/mo</li>
+          <li>Google Business calls up 218%</li>
+          <li>New revenue attributed to SEO: ~$28,000/mo</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cs-quote">
+      <p>"We went from chasing customers with ads to having our phone ring consistently from people who found us on Google. Monox.ai changed how our business works entirely. Worth every penny and then some."</p>
+      <cite>— Derek Walsh, Owner · Alpine HVAC Services</cite>
+    </div>
+    <div class="cs-footer"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       CASE STUDY 2 — Bloom & Co.
+  ═══════════════════════════════════════ -->
+  <div class="case-study">
+    <div class="cs-header">
+      <div>
+        <div class="cs-tag">E-Commerce SEO · Fashion & Apparel</div>
+        <h2>Bloom & Co. Boutique</h2>
+        <div class="cs-sub">Austin, TX &nbsp;·&nbsp; Women's Clothing & Accessories (DTC)</div>
+      </div>
+      <div class="cs-metrics">
+        <div class="metric-pill">
+          <span class="metric-val">187%</span>
+          <span class="metric-desc">organic revenue growth</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-val">−40%</span>
+          <span class="metric-desc">ad spend reduction</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-val">8,400</span>
+          <span class="metric-desc">new organic visitors/mo</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-body">
+      <div class="cs-col">
+        <div class="cs-col-label">The Challenge</div>
+        <p>Bloom & Co. was generating solid revenue but 78% of it came through paid Meta and Google ads. Their organic traffic was virtually zero — just 340 sessions per month. With ad costs rising 30% year-over-year, the founder needed a sustainable channel that didn't require constant ad budget to survive.</p>
+      </div>
+      <div class="cs-col">
+        <div class="cs-col-label">What We Did</div>
+        <ul>
+          <li>Full e-commerce SEO audit — 214 issues identified and resolved</li>
+          <li>Category page optimization with keyword-rich copy</li>
+          <li>Product schema markup for rich snippet eligibility</li>
+          <li>Editorial content strategy targeting buyer-intent searches</li>
+          <li>Internal linking overhaul across 300+ product pages</li>
+          <li>Image compression + next-gen formats (saved 2.3s load time)</li>
+          <li>Outreach to fashion and lifestyle publications for links</li>
+        </ul>
+      </div>
+      <div class="cs-col">
+        <div class="cs-col-label">Results (Month 9)</div>
+        <ul>
+          <li>187% increase in organic revenue</li>
+          <li>8,400 new organic visitors per month (up from 340)</li>
+          <li>52 category/product pages ranking page 1</li>
+          <li>Ad spend reduced by 40% while maintaining revenue</li>
+          <li>Email list grew 3x from organic content traffic</li>
+          <li>Return on Monox.ai investment: 11.4x</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cs-quote">
+      <p>"I was terrified to cut ad spend but Monox.ai showed me the data month by month. By month 6, organic was outperforming our ads. Now I sleep better knowing the business doesn't live or die by our ad budget."</p>
+      <cite>— Priya Mehta, Founder · Bloom & Co. Boutique</cite>
+    </div>
+    <div class="cs-footer"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       CASE STUDY 3 — Clearwater Dental
+  ═══════════════════════════════════════ -->
+  <div class="case-study">
+    <div class="cs-header">
+      <div>
+        <div class="cs-tag">Local SEO · Healthcare</div>
+        <h2>Clearwater Dental Group</h2>
+        <div class="cs-sub">Tampa, FL &nbsp;·&nbsp; Multi-Location Dental Practice</div>
+      </div>
+      <div class="cs-metrics">
+        <div class="metric-pill">
+          <span class="metric-val">5x</span>
+          <span class="metric-desc">new patient inquiries</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-val">#1</span>
+          <span class="metric-desc">"dentist near me" Tampa</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-val">−52%</span>
+          <span class="metric-desc">cost per new patient</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-body">
+      <div class="cs-col">
+        <div class="cs-col-label">The Challenge</div>
+        <p>Clearwater Dental opened a second location in South Tampa and struggled to generate patients for it. The new location had zero online presence, and the existing location's website was technically outdated — slow, with no local optimization. A competing DSO was dominating the local pack across all their target areas.</p>
+      </div>
+      <div class="cs-col">
+        <div class="cs-col-label">What We Did</div>
+        <ul>
+          <li>Multi-location local SEO strategy for both offices</li>
+          <li>Individual GBP profiles fully optimized with posts and Q&A</li>
+          <li>Review generation campaign (from 31 to 214 reviews in 4 months)</li>
+          <li>Service-specific landing pages for 12 dental procedures</li>
+          <li>Medical/dental schema markup for rich results</li>
+          <li>Website rebuild — new location page architecture</li>
+          <li>Local press mentions and dental association link building</li>
+        </ul>
+      </div>
+      <div class="cs-col">
+        <div class="cs-col-label">Results (Month 7)</div>
+        <ul>
+          <li>5x increase in new patient calls per month</li>
+          <li>#1 ranking for "dentist near me" in both areas</li>
+          <li>New location booked solid within 5 months of opening</li>
+          <li>Cost per new patient dropped from $340 to $163</li>
+          <li>Google reviews: 31 → 214 (avg rating 4.9★)</li>
+          <li>Now expanding to a third location on the back of this growth</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cs-quote">
+      <p>"We opened our second location and honestly panicked when new patients weren't coming in. Monox.ai had us fully booked within 5 months. The ROI has been extraordinary — we're now planning a third location."</p>
+      <cite>— Dr. James Calloway, Owner · Clearwater Dental Group</cite>
+    </div>
+    <div class="cs-footer"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       CASE STUDY 4 — Apex SaaS
+  ═══════════════════════════════════════ -->
+  <div class="case-study">
+    <div class="cs-header">
+      <div>
+        <div class="cs-tag">B2B SEO · SaaS / Technology</div>
+        <h2>Apex Project Solutions</h2>
+        <div class="cs-sub">Remote / SaaS &nbsp;·&nbsp; Construction Project Management Software</div>
+      </div>
+      <div class="cs-metrics">
+        <div class="metric-pill">
+          <span class="metric-val">220%</span>
+          <span class="metric-desc">more demo requests</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-val">Page 1</span>
+          <span class="metric-desc">for 31 target keywords</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-val">DA 14→38</span>
+          <span class="metric-desc">domain authority growth</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-body">
+      <div class="cs-col">
+        <div class="cs-col-label">The Challenge</div>
+        <p>Apex had a strong product in a competitive SaaS niche but virtually no organic footprint. Their domain authority was 14, they had 12 backlinks total, and their best keyword rankings were page 5+. They were burning $18,000/month on Google Ads to generate demos and needed a more sustainable growth engine.</p>
+      </div>
+      <div class="cs-col">
+        <div class="cs-col-label">What We Did</div>
+        <ul>
+          <li>Comprehensive technical SEO overhaul — 180+ issues fixed</li>
+          <li>Keyword research identifying 80 high-intent, winnable terms</li>
+          <li>Pillar + cluster content strategy across 6 topic areas</li>
+          <li>16 in-depth comparison and alternative pages targeting competitor keywords</li>
+          <li>Link building via guest posts and construction industry publications</li>
+          <li>Conversion rate optimization on the homepage and pricing page</li>
+        </ul>
+      </div>
+      <div class="cs-col">
+        <div class="cs-col-label">Results (Month 10)</div>
+        <ul>
+          <li>DA grew from 14 to 38 in 10 months</li>
+          <li>Ranking page 1 for 31 of 80 target keywords</li>
+          <li>Organic demo requests up 220%</li>
+          <li>Monthly organic traffic: 180 → 4,600 sessions</li>
+          <li>Google Ads budget reduced by $11,000/month</li>
+          <li>3 competitor alternative pages rank in top 3</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cs-quote">
+      <p>"We were pouring money into ads with no compounding return. Monox.ai built us an SEO foundation that keeps generating pipeline every month without us spending more. It's become our #1 demo source."</p>
+      <cite>— Kevin Torres, VP Marketing · Apex Project Solutions</cite>
+    </div>
+    <div class="cs-footer"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       CASE STUDY 5 — Harbor Law Group
+  ═══════════════════════════════════════ -->
+  <div class="case-study">
+    <div class="cs-header">
+      <div>
+        <div class="cs-tag">Local SEO · Legal Services</div>
+        <h2>Harbor Law Group</h2>
+        <div class="cs-sub">San Diego, CA &nbsp;·&nbsp; Personal Injury & Accident Law</div>
+      </div>
+      <div class="cs-metrics">
+        <div class="metric-pill">
+          <span class="metric-val">4x</span>
+          <span class="metric-desc">organic traffic growth</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-val">−60%</span>
+          <span class="metric-desc">cost per lead</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-val">$2.1M</span>
+          <span class="metric-desc">new cases attributed to SEO</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-body">
+      <div class="cs-col">
+        <div class="cs-col-label">The Challenge</div>
+        <p>Personal injury law is one of the most competitive SEO niches in the country. Harbor Law Group was completely buried beneath aggregators like FindLaw and Justia, plus large regional firms with massive link budgets. Their cost per lead via ads had climbed to $680 — unsustainable for a three-attorney firm.</p>
+      </div>
+      <div class="cs-col">
+        <div class="cs-col-label">What We Did</div>
+        <ul>
+          <li>Niche-down keyword strategy targeting specific accident types + neighborhoods</li>
+          <li>40 practice area and location-specific landing pages</li>
+          <li>Legal schema markup including attorney profiles and reviews</li>
+          <li>PR-driven link campaign — 3 features in San Diego media outlets</li>
+          <li>FAQ content strategy targeting "People Also Ask" boxes</li>
+          <li>Full site rebuild with EAT signals (author bios, credentials, citations)</li>
+          <li>GBP and local citation cleanup across 100+ directories</li>
+        </ul>
+      </div>
+      <div class="cs-col">
+        <div class="cs-col-label">Results (Month 12)</div>
+        <ul>
+          <li>4x increase in total organic traffic</li>
+          <li>Cost per lead dropped from $680 to $271</li>
+          <li>Ranking page 1 for 44 practice area keywords</li>
+          <li>Featured in 3 Google "People Also Ask" boxes</li>
+          <li>$2.1M in new case revenue attributed to SEO leads</li>
+          <li>Now the highest-ranking independent PI firm in San Diego</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cs-quote">
+      <p>"Everyone told us you can't beat the aggregators in legal SEO. Monox.ai proved them wrong. We went from being invisible to being the go-to firm for specific accident types in specific neighborhoods. The ROI speaks for itself."</p>
+      <cite>— Amanda Rourke, Managing Partner · Harbor Law Group</cite>
+    </div>
+    <div class="cs-footer"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       CTA
+  ═══════════════════════════════════════ -->
+  <div class="audit-cta">
+    <div class="audit-cta-eyebrow">Start Today</div>
+    <h2>Want Results Like These?</h2>
+    <p>Run a free SEO audit on your website right now — or book a strategy call with Isaac directly to talk through what's holding your site back.</p>
+    <div class="cta-buttons">
+      <a href="index.html" class="btn-primary">Get Your Free SEO Audit →</a>
+      <a href="https://calendly.com/isaac-monox/30" class="btn-secondary" target="_blank">Book a Strategy Call</a>
+    </div>
+    <p class="cta-note">Free 30-minute call · No commitment · Real actionable advice · isaac@monox.ai</p>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>
+    <strong style="color: var(--muted);">monox.ai</strong><br>
+    SEO · Paid Ads · Website Design · Growth Strategy<br><br>
+    <a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms</a> &nbsp;·&nbsp; <a href="mailto:isaac@monox.ai">isaac@monox.ai</a>
+  </p>
+</footer>
+
+</body>
+</html>
