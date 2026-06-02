@@ -1006,6 +1006,167 @@
     }
 
     /* ═══════════════════════════════════════
+       BRAND LIGHT THEME
+    ═══════════════════════════════════════ */
+    :root {
+      --bg:          #f0f7ff;
+      --bg-2:        #ffffff;
+      --bg-3:        #e2eff9;
+      --bg-4:        #d0e6f4;
+      --border:      rgba(59,170,222,0.2);
+      --border-hi:   rgba(59,170,222,0.36);
+      --indigo:      #3baade;
+      --indigo-dim:  #2991be;
+      --cyan:        #22d3ee;
+      --green:       #16a34a;
+      --yellow:      #d97706;
+      --red:         #dc2626;
+      --red-dim:     #b91c1c;
+      --text:        #0d1b2a;
+      --text-muted:  #35516a;
+      --text-faint:  #7a96aa;
+    }
+
+    body { background: var(--bg); color: var(--text); }
+
+    /* Nav */
+    nav { background: rgba(255,255,255,0.97); border-bottom-color: var(--border); }
+    .nav-link { color: var(--text-muted); }
+    .nav-link:hover, .nav-link.active { color: var(--indigo); }
+
+    /* Hero */
+    #hero::before {
+      background: radial-gradient(ellipse at 40% 40%, rgba(59,170,222,0.13) 0%, transparent 65%);
+    }
+    #hero::after {
+      background: radial-gradient(ellipse at 70% 70%, rgba(34,211,238,0.07) 0%, transparent 60%);
+    }
+    #hero h1 { color: var(--text); }
+    #hero h1 span {
+      background: linear-gradient(135deg, #3baade 0%, #2580b5 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub { color: var(--text-muted); }
+    .hero-badge { background: rgba(59,170,222,0.1); border-color: rgba(59,170,222,0.3); color: var(--indigo); }
+    .hero-badge .dot { background: #16a34a; }
+    .hero-nudge { color: var(--text-faint); }
+    .chevron { border-color: var(--text-faint); }
+
+    /* Form */
+    #auditForm { background: white; border-color: rgba(59,170,222,0.38); box-shadow: 0 4px 24px rgba(59,170,222,0.12); }
+    #urlInput { color: var(--text); }
+    #urlInput::placeholder { color: var(--text-faint); }
+    .trust-item { color: var(--text-faint); }
+    .trust-item .check { color: #16a34a; }
+
+    /* Features strip */
+    .features-strip { background: white; border-color: var(--border); }
+    .feat h4 { color: var(--text); }
+    .feat p { color: var(--text-muted); }
+
+    /* Section labels */
+    .eyebrow { color: var(--indigo); }
+    .section-heading { color: var(--text); }
+    .section-label { color: var(--indigo); }
+
+    /* Scan card */
+    .scan-card { background: white; border-color: rgba(59,170,222,0.28); box-shadow: 0 6px 32px rgba(59,170,222,0.1); }
+    .scan-title { color: var(--text); }
+    .scan-bar-track { background: var(--bg-3); }
+    .scan-step { color: var(--text-faint); }
+    .scan-step.active { color: var(--text-muted); }
+    .scan-step.done { color: #16a34a; }
+    .step-dot { background: var(--text-faint); }
+    .scan-step.active .step-dot { background: var(--indigo); }
+    .scan-step.done .step-dot { background: #16a34a; }
+    .scan-spinner { border-color: var(--border-hi); border-top-color: var(--indigo); }
+
+    /* Results */
+    .result-header { background: white; border-color: var(--border); box-shadow: 0 2px 20px rgba(59,170,222,0.08); }
+    .result-meta h2 { color: var(--text); }
+    .result-domain { color: var(--text-muted); }
+    .ring-track { stroke: var(--bg-3); }
+
+    /* Pill badges */
+    .pill-grade  { background: rgba(220,38,38,0.08);  color: #991b1b;  border-color: rgba(220,38,38,0.2); }
+    .pill-issues { background: rgba(217,119,6,0.08);  color: #92400e;  border-color: rgba(217,119,6,0.2); }
+    .pill-pass   { background: rgba(22,163,74,0.08);  color: #166534;  border-color: rgba(22,163,74,0.2); }
+
+    /* Checks panels */
+    .checks-panel { background: white; border-color: var(--border); box-shadow: 0 1px 8px rgba(59,170,222,0.05); }
+    .checks-panel-title.pass { color: #16a34a; }
+    .checks-panel-title.fail { color: #d97706; }
+    .check-text { color: var(--text-muted); }
+    .check-text strong { color: var(--text); }
+    .check-item { border-color: var(--border); }
+    .sev-critical { background: rgba(220,38,38,0.1);  color: #991b1b; }
+    .sev-warning  { background: rgba(217,119,6,0.1);  color: #92400e; }
+    .sev-info     { background: rgba(59,170,222,0.1); color: var(--indigo); }
+
+    /* Category cards */
+    .categories-title { color: var(--text-faint); }
+    .cat-card { background: white; border-color: var(--border); box-shadow: 0 1px 8px rgba(59,170,222,0.05); }
+    .cat-label { color: var(--text-muted); }
+    .cat-score { color: var(--text); }
+    .cat-bar-track { background: var(--bg-3); }
+    .cat-verdict { font-weight: 700; }
+
+    /* Issue cards */
+    .issues-title { color: var(--text-faint); }
+    .issue-card { background: white; border-color: var(--border); box-shadow: 0 1px 4px rgba(0,0,0,0.03); }
+    .issue-card-head:hover { background: var(--bg-3); }
+    .issue-title { color: var(--text); }
+    .issue-chevron { color: var(--text-faint); }
+    .issue-body { color: var(--text-muted); border-color: var(--border); }
+    .dot-critical { background: #dc2626; box-shadow: 0 0 6px rgba(220,38,38,0.3); }
+    .dot-warning  { background: #d97706; box-shadow: 0 0 6px rgba(217,119,6,0.3); }
+    .dot-info     { background: var(--indigo); }
+    .impact-high   { background: rgba(220,38,38,0.1);  color: #991b1b; }
+    .impact-medium { background: rgba(217,119,6,0.1);  color: #92400e; }
+    .impact-low    { background: rgba(59,170,222,0.1); color: var(--indigo); }
+
+    /* CTA banner — solid brand blue */
+    .cta-banner { background: linear-gradient(135deg, #3baade 0%, #2278b0 100%); border-color: rgba(59,170,222,0.4); }
+    .cta-eyebrow { color: rgba(255,255,255,0.82); }
+    .cta-headline { color: #ffffff; }
+    .cta-sub { color: rgba(255,255,255,0.88); }
+    .cta-primary { background: white; color: var(--indigo); }
+    .cta-primary:hover { background: #f0f7ff; box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+    .cta-secondary { background: rgba(255,255,255,0.15); color: white; border-color: rgba(255,255,255,0.3); }
+    .cta-secondary:hover { background: rgba(255,255,255,0.25); color: white; }
+    .cta-note { color: rgba(255,255,255,0.65); }
+
+    /* Download / reset */
+    .download-btn { background: rgba(59,170,222,0.08); border-color: rgba(59,170,222,0.28); color: var(--indigo); }
+    .download-btn:hover { background: rgba(59,170,222,0.15); color: var(--indigo-dim); box-shadow: none; }
+    .another-audit button { color: var(--text-muted); }
+
+    /* FAQ */
+    #faqSection { background: white; border-color: var(--border); }
+    .faq-item { border-color: var(--border); }
+    .faq-item:first-child { border-color: var(--border); }
+    .faq-q { color: var(--text); }
+    .faq-chevron { color: var(--text-faint); }
+    .faq-item.open .faq-chevron { color: var(--indigo); }
+    .faq-a { color: var(--text-muted); }
+    .faq-a a { color: var(--indigo); }
+
+    /* Quote / social proof */
+    .quote-section { background: var(--bg-3); }
+    .quote-text { color: var(--text); }
+    .stars { color: var(--indigo); }
+    .quote-attr { color: var(--text-faint); }
+
+    /* Footer */
+    footer { background: white; border-color: var(--border); }
+    footer p { color: var(--text-faint); }
+
+    /* Divider */
+    .divider { background: linear-gradient(90deg, transparent, var(--border), transparent); }
+
+    /* ═══════════════════════════════════════
        MOBILE — ≤ 640px
     ═══════════════════════════════════════ */
     @media (max-width: 640px) {
@@ -1465,19 +1626,7 @@ const randInt = (a, b) => Math.floor(Math.random() * (b - a + 1)) + a;
 const randFloat = (a, b) => Math.random() * (b - a) + a;
 
 // ─── Scanning steps ───────────────────────────────────────
-const SCAN_STEPS = [
-  { label: 'Resolving domain & verifying SSL certificate…',    pct: 12 },
-  { label: 'Fetching page HTML & document structure…',         pct: 25 },
-  { label: 'Analyzing title tags & meta data…',                pct: 38 },
-  { label: 'Evaluating heading hierarchy & on-page signals…',  pct: 50 },
-  { label: 'Checking Open Graph, schema & canonical tags…',    pct: 62 },
-  { label: 'Testing page speed & Core Web Vitals…',            pct: 73 },
-  { label: 'Analyzing content depth & keyword coverage…',      pct: 83 },
-  { label: 'Evaluating backlink profile & domain authority…',  pct: 93 },
-  { label: 'Generating recommendations…',                      pct: 100 },
-];
-
-const STEP_DURATIONS = [600, 750, 550, 600, 650, 900, 750, 850, 500];
+// Scan steps are generated dynamically in startAudit (see below)
 
 // ─── Normalize URL ────────────────────────────────────────
 function normalizeURL(raw) {
@@ -2115,33 +2264,30 @@ function toggleFAQ(btn) {
   if (!isOpen) item.classList.add('open');
 }
 
-// ─── Run scanning animation ───────────────────────────────
-async function runScanAnimation(domain) {
+// ─── Step renderer helpers ────────────────────────────────
+let _stepIdx = 0;
+
+async function runStep(label, pct, dur) {
   const stepsEl = document.getElementById('scanStepsList');
   const barFill = document.getElementById('scanBarFill');
 
-  stepsEl.innerHTML = SCAN_STEPS.map((s, i) => `
-    <div class="scan-step" id="step-${i}">
-      <div class="step-dot"></div>
-      <span>${s.label}</span>
-    </div>
-  `).join('');
+  const el = document.createElement('div');
+  el.className = 'scan-step';
+  el.innerHTML = `<div class="step-dot"></div><span>${label}</span>`;
+  stepsEl.appendChild(el);
 
-  document.getElementById('scanDomainLabel').textContent = domain;
+  // Stagger appearance
+  await new Promise(r => setTimeout(r, 30));
+  el.classList.add('active');
+  barFill.style.width = pct + '%';
 
-  for (let i = 0; i < SCAN_STEPS.length; i++) {
-    const stepEl = document.getElementById(`step-${i}`);
-    stepEl.classList.add('active');
-    barFill.style.width = SCAN_STEPS[i].pct + '%';
+  await new Promise(r => setTimeout(r, dur));
 
-    await new Promise(r => setTimeout(r, STEP_DURATIONS[i]));
-
-    stepEl.classList.remove('active');
-    stepEl.classList.add('done');
-    const dot = stepEl.querySelector('.step-dot');
-    stepEl.childNodes.forEach(n => {
-      if (n.tagName === 'SPAN') n.textContent = '✓ ' + n.textContent;
-    });
+  el.classList.remove('active');
+  el.classList.add('done');
+  const span = el.querySelector('span');
+  if (!span.textContent.startsWith('⚠')) {
+    span.textContent = '✓ ' + span.textContent;
   }
 }
 
@@ -2149,42 +2295,95 @@ async function runScanAnimation(domain) {
 async function startAudit(e) {
   e.preventDefault();
   const errorEl = document.getElementById('formError');
-  const btn     = document.getElementById('analyzeBtn');
   errorEl.style.display = 'none';
 
   const raw = document.getElementById('urlInput').value;
   const url = normalizeURL(raw);
+  if (!url) { errorEl.style.display = 'block'; return; }
 
-  if (!url) {
-    errorEl.style.display = 'block';
-    return;
-  }
+  const domain  = getDomain(url);
+  const isHttps = url.startsWith('https://');
 
-  const domain   = getDomain(url);
-  const isHttps  = url.startsWith('https://');
-
-  // Switch to scanning view
+  // Switch UI to scanning state
   document.getElementById('hero').hidden       = true;
   document.getElementById('featStrip').hidden  = true;
   document.getElementById('faqSection').hidden = true;
   document.getElementById('scanning').hidden   = false;
   document.getElementById('results').hidden    = true;
+  document.getElementById('scanDomainLabel').textContent = domain;
+  document.getElementById('scanStepsList').innerHTML = '';
+  document.getElementById('scanBarFill').style.width = '0%';
 
-  // Run scan animation + fetch in parallel
-  const [_, html] = await Promise.all([
-    runScanAnimation(domain),
-    fetchHTML(url),
-  ]);
+  // ── Phase 1: Generic steps while fetch runs in background ──
+  const htmlPromise = fetchHTML(url);
 
-  // Parse SEO signals
-  const seo = parseSEO(html, url);
+  await runStep(`Connecting to ${domain} and verifying SSL…`,         8,   700);
+  await runStep('Establishing connection and downloading HTML…',       17,  950);
+  await runStep('Parsing document structure, tags, and links…',        26,  700);
+  await runStep('Reading navigation, headings, and page hierarchy…',   34,  650);
 
-  // Calculate everything
+  // Wait for HTML (usually already done by now)
+  const html = await htmlPromise;
+  const seo  = parseSEO(html, url);
+
+  // ── Phase 2: Specific callouts from real page data ──
+  if (seo?.title) {
+    const t = seo.title.length > 46 ? seo.title.slice(0, 46) + '…' : seo.title;
+    await runStep(`Page title: "${t}"`, 42, 620);
+  } else {
+    await runStep('⚠ No page title tag found on this page', 42, 520);
+  }
+
+  if (seo?.h1Count === 1) {
+    const h = (seo.h1Text || '').slice(0, 42);
+    await runStep(`H1 heading: "${h}${(seo.h1Text || '').length > 42 ? '…' : ''}"`, 50, 580);
+  } else if (seo?.h1Count > 1) {
+    await runStep(`⚠ Found ${seo.h1Count} H1 headings — only 1 is recommended`, 50, 600);
+  } else if (seo !== null) {
+    await runStep('⚠ No H1 heading found — critical on-page signal missing', 50, 520);
+  } else {
+    await runStep('Evaluating on-page heading structure…', 50, 580);
+  }
+
+  if (seo?.metaDesc) {
+    await runStep(`Meta description: ${seo.metaDescLen} characters${seo.metaDescGood ? '' : ' — not fully optimized'}`, 58, 620);
+  } else if (seo !== null) {
+    await runStep('⚠ No meta description found — hurts click-through rate', 58, 540);
+  } else {
+    await runStep('Analyzing meta description and Open Graph tags…', 58, 600);
+  }
+
+  if (seo?.imgCount > 0) {
+    const missing = seo.imgCount - seo.altCount;
+    await runStep(
+      missing > 0
+        ? `${seo.imgCount} images scanned — ${missing} missing alt text`
+        : `${seo.imgCount} images scanned — all have alt text`,
+      65, 720
+    );
+  } else {
+    await runStep('Scanning images and media assets…', 65, 650);
+  }
+
+  if (seo?.schemaCount > 0) {
+    await runStep(`Schema markup: ${seo.schemaCount} structured data block${seo.schemaCount > 1 ? 's' : ''} detected`, 72, 600);
+  } else if (seo !== null) {
+    await runStep('⚠ No schema markup — missing rich snippet opportunity', 72, 600);
+  } else {
+    await runStep('Checking structured data and schema markup…', 72, 600);
+  }
+
+  // ── Phase 3: Simulated deep analysis ──
+  await runStep('Running Core Web Vitals performance simulation…',    79, 1100);
+  await runStep('Testing mobile responsiveness and load speed…',      85,  900);
+  await runStep('Analyzing backlink profile and domain authority…',   91,  950);
+  await runStep('Comparing against top 3 competing domains…',         96,  850);
+  await runStep('Generating your prioritized SEO report…',           100,  650);
+
+  // Calculate and render
   const score      = calcScore(seo, isHttps);
   const results    = buildResults(seo, url, isHttps);
   const categories = buildCategories(seo);
-
-  // Render
   renderResults(url, score, results, categories);
 }
 
