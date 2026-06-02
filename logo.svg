@@ -1,0 +1,71 @@
+<svg viewBox="0 0 310 80" xmlns="http://www.w3.org/2000/svg" fill="none">
+
+  <!-- ── Icon mark (left, fits in 80×80) ── -->
+  <g transform="translate(0, 0)">
+    <!-- Outer ring arc segments -->
+    <path stroke="#3BAADE" stroke-width="4" stroke-linecap="round"
+          d="M 40 5.5 A 34.5 34.5 0 0 1 67 18"/>
+    <path stroke="#3BAADE" stroke-width="4" stroke-linecap="round"
+          d="M 71 29 A 34.5 34.5 0 0 1 73.5 45"/>
+    <path stroke="#3BAADE" stroke-width="4" stroke-linecap="round"
+          d="M 68 59 A 34.5 34.5 0 0 1 45 75"/>
+    <path stroke="#3BAADE" stroke-width="4" stroke-linecap="round"
+          d="M 35 75 A 34.5 34.5 0 0 1 11 59"/>
+    <path stroke="#3BAADE" stroke-width="4" stroke-linecap="round"
+          d="M 6.5 45 A 34.5 34.5 0 0 1 19 14"/>
+
+    <!-- Outer ring: open circles -->
+    <circle cx="40"  cy="5.5" r="3.6" stroke="#3BAADE" stroke-width="2.8" fill="white"/>
+    <circle cx="45"  cy="75"  r="3.6" stroke="#3BAADE" stroke-width="2.8" fill="white"/>
+    <circle cx="6.5" cy="45"  r="3.6" stroke="#3BAADE" stroke-width="2.8" fill="white"/>
+    <circle cx="19"  cy="14"  r="3.6" stroke="#3BAADE" stroke-width="2.8" fill="white"/>
+
+    <!-- Outer ring: filled dots -->
+    <circle cx="67"  cy="18" r="3.6" fill="#3BAADE"/>
+    <circle cx="71"  cy="29" r="3.6" fill="#3BAADE"/>
+    <circle cx="73.5" cy="45" r="3.6" fill="#3BAADE"/>
+    <circle cx="68"  cy="59" r="3.6" fill="#3BAADE"/>
+    <circle cx="35"  cy="75" r="3.6" fill="#3BAADE"/>
+    <circle cx="11"  cy="59" r="3.6" fill="#3BAADE"/>
+
+    <!-- Right stalk -->
+    <path stroke="#3BAADE" stroke-width="3.5" stroke-linecap="round" d="M 73.5 37 L 80 37"/>
+    <circle cx="80" cy="37" r="3.2" stroke="#3BAADE" stroke-width="2.8" fill="white"/>
+
+    <!-- Interior circuit paths -->
+    <path stroke="#3BAADE" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"
+          d="M 40 5.5 L 40 22 Q 38.5 29 30 33 L 21 37"/>
+    <path stroke="#3BAADE" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"
+          d="M 67 18 L 54 26 Q 49 34 49 42 L 48 50"/>
+    <path stroke="#3BAADE" stroke-width="3"   stroke-linecap="round"
+          d="M 21 37 Q 15 43 19 50 L 27 56"/>
+    <path stroke="#3BAADE" stroke-width="3"   stroke-linecap="round"
+          d="M 48 50 Q 46 58 42 64"/>
+
+    <!-- Interior: filled dots -->
+    <circle cx="40" cy="22" r="3.2" fill="#3BAADE"/>
+    <circle cx="30" cy="33" r="3.2" fill="#3BAADE"/>
+    <circle cx="48" cy="50" r="3.2" fill="#3BAADE"/>
+    <circle cx="42" cy="64" r="3.2" fill="#3BAADE"/>
+
+    <!-- Interior: open circles -->
+    <circle cx="21" cy="37" r="3"   stroke="#3BAADE" stroke-width="2.4" fill="white"/>
+    <circle cx="50" cy="34" r="2.8" stroke="#3BAADE" stroke-width="2.2" fill="white"/>
+    <circle cx="27" cy="56" r="2.8" stroke="#3BAADE" stroke-width="2.2" fill="white"/>
+
+    <!-- Small accent dots -->
+    <circle cx="45" cy="29" r="2.8" fill="#3BAADE"/>
+    <circle cx="61" cy="29" r="2.8" fill="#3BAADE"/>
+    <circle cx="40" cy="44" r="2.4" fill="#3BAADE"/>
+  </g>
+
+  <!-- ── "monox.ai" wordmark ── -->
+  <text
+    x="94" y="55"
+    font-family="'Inter', 'Nunito', 'Poppins', Arial, sans-serif"
+    font-size="38"
+    font-weight="700"
+    letter-spacing="-0.5"
+    fill="#3BAADE">monox.ai</text>
+
+</svg>
