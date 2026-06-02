@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" href="favicon.svg">
 
   <style>
     /* ═══════════════════════════════════════
@@ -62,14 +64,17 @@
     }
 
     .nav-logo {
-      font-size: 18px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      color: var(--text);
+      display: flex;
+      align-items: center;
       text-decoration: none;
+      flex-shrink: 0;
     }
 
-    .nav-logo span { color: var(--indigo); }
+    .nav-logo img {
+      height: 30px;
+      width: auto;
+      display: block;
+    }
 
     .nav-right { display: flex; align-items: center; gap: 20px; }
 
@@ -1137,7 +1142,9 @@
      NAV
 ═══════════════════════════════════════ -->
 <nav>
-  <a href="#" class="nav-logo">monox<span>.</span>ai</a>
+  <a href="#" class="nav-logo">
+    <img src="logo.svg" alt="Monox.ai">
+  </a>
   <div class="nav-right">
     <a href="#" class="nav-link">Services</a>
     <a href="case-studies.html" class="nav-link">Case Studies</a>
