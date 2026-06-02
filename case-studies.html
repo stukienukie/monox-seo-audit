@@ -495,10 +495,67 @@
       line-height: 1.8;
     }
 
-    footer a { color: rgba(165,180,252,0.5); text-decoration: none; }
-    footer a:hover { color: rgba(165,180,252,0.85); }
+    footer a { color: var(--indigo); text-decoration: none; }
+    footer a:hover { opacity: 0.75; }
 
-    .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(99,102,241,0.15), transparent); }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(59,170,222,0.2), transparent); }
+
+    /* ═══════════════════════════════════════
+       BRAND LIGHT THEME
+    ═══════════════════════════════════════ */
+    :root {
+      --bg:         #f0f7ff;
+      --bg-2:       #ffffff;
+      --bg-3:       #e2eff9;
+      --border:     rgba(59,170,222,0.2);
+      --border-hi:  rgba(59,170,222,0.36);
+      --indigo:     #3baade;
+      --indigo-dim: #2991be;
+      --green:      #16a34a;
+      --text:       #0d1b2a;
+      --muted:      #35516a;
+      --faint:      #7a96aa;
+    }
+
+    body { background: var(--bg); color: var(--text); }
+    nav { background: rgba(255,255,255,0.97); border-bottom-color: var(--border); }
+    .nav-link { color: var(--muted); }
+    .nav-link:hover, .nav-link.active { color: var(--indigo); }
+    .page-hero::before { background: radial-gradient(ellipse at center, rgba(59,170,222,0.1) 0%, transparent 65%); }
+    .hero-eyebrow { background: rgba(59,170,222,0.1); border-color: rgba(59,170,222,0.3); color: var(--indigo); }
+    .page-hero h1 { color: var(--text); }
+    .page-hero h1 span { background: linear-gradient(135deg, #3baade, #2278b0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .page-hero p { color: var(--muted); }
+    .stats-row { background: white; border-color: var(--border); }
+    .stat { border-right-color: var(--border); }
+    .stat-label { color: var(--muted); }
+    .section-label { color: var(--indigo); }
+    .section-title { color: var(--text); }
+    .case-study { background: white; border-color: var(--border); box-shadow: 0 2px 16px rgba(59,170,222,0.07); }
+    .case-study:hover { border-color: rgba(59,170,222,0.4); box-shadow: 0 4px 28px rgba(59,170,222,0.12); }
+    .cs-header { border-color: var(--border); }
+    .cs-tag { background: rgba(59,170,222,0.1); border-color: rgba(59,170,222,0.22); color: var(--indigo); }
+    .cs-header h2 { color: var(--text); }
+    .cs-sub { color: var(--muted); }
+    .cs-col-label { color: var(--faint); }
+    .cs-col p, .cs-col ul li { color: var(--muted); }
+    .cs-col ul li::before { color: var(--indigo); }
+    .cs-col + .cs-col { border-left-color: var(--border); }
+    .cs-quote { background: rgba(59,170,222,0.06); border-left-color: var(--indigo); }
+    .cs-quote p { color: var(--muted); }
+    .cs-quote cite { color: var(--faint); }
+    .audit-cta { background: linear-gradient(135deg, #3baade 0%, #2278b0 100%); border-color: rgba(59,170,222,0.4); }
+    .audit-cta-eyebrow { color: rgba(255,255,255,0.82); }
+    .audit-cta h2 { color: white; }
+    .audit-cta p { color: rgba(255,255,255,0.88); }
+    .btn-primary { background: white; color: var(--indigo); }
+    .btn-primary:hover { background: #f0f7ff; box-shadow: 0 8px 24px rgba(0,0,0,0.15); transform: translateY(-1px); }
+    .btn-secondary { background: rgba(255,255,255,0.15); color: white; border-color: rgba(255,255,255,0.3); }
+    .btn-secondary:hover { background: rgba(255,255,255,0.25); color: white; }
+    .cta-note { color: rgba(255,255,255,0.65); }
+    footer { background: white; border-color: var(--border); }
+    footer p { color: var(--faint); }
+    footer strong { color: var(--muted); }
   </style>
 </head>
 <body>
@@ -864,6 +921,130 @@
   <!-- ═══════════════════════════════════════
        CTA
   ═══════════════════════════════════════ -->
+  <!-- ═══════════════════════════════════════
+       CASE STUDY 6 — RVsOffGrid
+  ═══════════════════════════════════════ -->
+  <div class="case-study">
+    <div class="cs-header">
+      <div>
+        <div class="cs-tag">Website Build · RV Lifestyle</div>
+        <h2>RVsOffGrid</h2>
+        <div class="cs-sub">Nationwide &nbsp;·&nbsp; Off-Grid RV Living Resources & Community</div>
+      </div>
+      <div class="cs-metrics">
+        <div class="metric-pill">
+          <span class="metric-val">3x</span>
+          <span class="metric-desc">more leads within 60 days</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-val">2 wks</span>
+          <span class="metric-desc">delivery from start to launch</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-val">Pro</span>
+          <span class="metric-desc">brand presence established</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-body">
+      <div class="cs-col">
+        <div class="cs-col-label">The Challenge</div>
+        <p>RVsOffGrid had a growing audience and a strong niche, but no professional website to match. They were relying entirely on word-of-mouth and social media, with no dedicated landing page to capture leads or credibly represent the brand. Jason Orr needed a site that looked legitimate, loaded fast, and converted visitors into real inquiries — quickly.</p>
+      </div>
+      <div class="cs-col">
+        <div class="cs-col-label">What We Built</div>
+        <ul>
+          <li>Full professional website designed and built from scratch</li>
+          <li>Clear, conversion-focused messaging for the off-grid RV audience</li>
+          <li>Lead capture forms and contact integrations wired up</li>
+          <li>Mobile-first design optimized for on-the-road users</li>
+          <li>Fast load times — under 2 seconds on all devices</li>
+          <li>Brand identity elements that establish trust and authority</li>
+          <li>Delivered and live in under two weeks from kickoff</li>
+        </ul>
+      </div>
+      <div class="cs-col">
+        <div class="cs-col-label">Results</div>
+        <ul>
+          <li>Professional web presence live within 14 days</li>
+          <li>3x increase in contact form submissions within 60 days</li>
+          <li>Brand credibility that opened partnership opportunities</li>
+          <li>Began appearing in niche off-grid RV searches organically</li>
+          <li>Jason described it as "exactly what we envisioned — and faster"</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cs-quote">
+      <p>"The team at Monox.ai built us a website that actually looks like a real business. The communication was elite from day one — they answered questions quickly, kept us updated at every step, and delivered faster than we expected. We were getting leads from the site within weeks of going live. Couldn't recommend them more."</p>
+      <cite>— Jason Orr, Owner · RVsOffGrid</cite>
+    </div>
+    <div class="cs-footer"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       CASE STUDY 7 — Tucson RV Solar
+  ═══════════════════════════════════════ -->
+  <div class="case-study">
+    <div class="cs-header">
+      <div>
+        <div class="cs-tag">Website Build · RV Solar · Local Services</div>
+        <h2>Tucson RV Solar</h2>
+        <div class="cs-sub">Tucson, AZ &nbsp;·&nbsp; RV Solar Panel Installation & Service</div>
+      </div>
+      <div class="cs-metrics">
+        <div class="metric-pill">
+          <span class="metric-val">2x</span>
+          <span class="metric-desc">monthly leads in 90 days</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-val">Fast</span>
+          <span class="metric-desc">turnaround — weeks, not months</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-val">5★</span>
+          <span class="metric-desc">customer reviews from web leads</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-body">
+      <div class="cs-col">
+        <div class="cs-col-label">The Challenge</div>
+        <p>Christopher Killeen runs one of Tucson's go-to RV solar installation services, but his old website looked outdated, loaded slowly, and wasn't converting visitors into inquiries. He was losing business to competitors who simply had a better-looking online presence. He needed a site that reflected the quality of his actual work — and fast.</p>
+      </div>
+      <div class="cs-col">
+        <div class="cs-col-label">What We Built</div>
+        <ul>
+          <li>Complete website redesign and rebuild from the ground up</li>
+          <li>Solar-specific messaging and trust signals built into every page</li>
+          <li>Service area pages optimized for Tucson and surrounding areas</li>
+          <li>Clear lead capture with phone, form, and quote request CTAs</li>
+          <li>Professional before/after imagery and service showcase</li>
+          <li>Significantly faster load times — previous site averaged 6+ seconds</li>
+          <li>Google Business Profile aligned with new site structure</li>
+        </ul>
+      </div>
+      <div class="cs-col">
+        <div class="cs-col-label">Results</div>
+        <ul>
+          <li>2x more monthly leads within 90 days of launch</li>
+          <li>Site load time dropped from 6.2s to under 2s</li>
+          <li>Multiple new 5-star reviews from customers who found him online</li>
+          <li>Consistent inbound calls from people who discovered him via search</li>
+          <li>Christopher says the site "pays for itself every single month"</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cs-quote">
+      <p>"I was skeptical at first because I'd been burned by other agencies before. But Monox.ai completely exceeded my expectations. They built the website quickly, kept me in the loop the entire time, and the final product looked incredible. We started getting real leads almost immediately after launch. Their communication was second to none — always responsive, always professional. I'd recommend them to anyone."</p>
+      <cite>— Christopher Killeen, Owner · Tucson RV Solar &nbsp;·&nbsp; Tucson, AZ</cite>
+    </div>
+    <div class="cs-footer"></div>
+  </div>
+
   <div class="audit-cta">
     <div class="audit-cta-eyebrow">Start Today</div>
     <h2>Want Results Like These?</h2>
